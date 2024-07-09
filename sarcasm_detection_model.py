@@ -9,7 +9,8 @@ model = tf.keras.models.load_model("sarcasm_model.h5")
 with open("tokenizer.pickle", "rb") as handle:
     tokenizer = pickle.load(handle)
 
-# Predict on new sentences
+# Predict on new sentences yet there is a problem with one sentence, it is supposed to be sarcastic but it is not according to the model
+# This is because the model was trained on a dataset that had a lot of sentences that were not sarcastic
 sentences = [
     "granny starting to fear spiders in the garden might be real",
     "game of thrones season finale showing this sunday night",
